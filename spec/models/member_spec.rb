@@ -2,19 +2,12 @@ require 'spec_helper'
 
 describe Member do
 
-  it { should have_valid( :name ).when( 'Thomas', 'Carl' ) }
-  it { should_not have_valid( :name ).when( nil, '' ) }
-  
-  it { should have_valid( :email ).when( 'Thomas', 'Carl' ) }
-  it { should_not have_valid( :email ).when( nil, '' ) }
-  
-  it { should have_valid( :phone_number ).when( 'Thomas', 'Carl' ) }
-  it { should_not have_valid( :phone_number ).when( nil, '' ) }
-  
-  it { should have_valid( :address ).when( 'Thomas', 'Carl' ) }
-  it { should_not have_valid( :address ).when( nil, '' ) }
-  
-  it { should have_valid( :role ).when( 'Thomas', 'Carl' ) }
-  it { should_not have_valid( :role ).when( nil, '' ) }
-  
+  it { should validate_presence_of( :name )}
+  it { should validate_presence_of( :email )}
+  it { should validate_presence_of( :phone_number )}
+  it { should validate_presence_of( :address )}
+  it { should validate_presence_of( :role )}
+
+  it { should have_many(:artworks) }
+
 end
