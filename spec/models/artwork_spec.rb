@@ -13,5 +13,6 @@ describe Artwork do
 
   it { should belong_to( :member  ) }
   it { should have_many( :purchases ) }
+  it { should have_many( :artwork_collections ) }
 
 end

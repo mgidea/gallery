@@ -8,4 +8,5 @@ class Artwork < ActiveRecord::Base
 
   belongs_to :member
   has_many :purchases, inverse_of: :artwork
+  has_many :artwork_collections, inverse_of: :artwork
 end
