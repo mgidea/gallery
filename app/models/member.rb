@@ -6,4 +6,5 @@ class Member < ActiveRecord::Base
   validates_presence_of :role
 
   has_many :artworks
+  has_many :purchases, inverse_of: :member
 end

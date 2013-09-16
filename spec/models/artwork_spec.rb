@@ -11,5 +11,7 @@ describe Artwork do
   it {should validate_presence_of(:medium)}
   it {should validate_presence_of(:available)}
 
-  it { should belong_to( :member ) }
+  it { should belong_to( :member  ) }
+  it { should have_many( :purchases ) }
+
 end
