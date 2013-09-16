@@ -9,5 +9,6 @@ describe Member do
   it { should validate_presence_of( :role )}
 
   it { should have_many(:artworks) }
+  it { should have_many(:purchases) }
 
 end
