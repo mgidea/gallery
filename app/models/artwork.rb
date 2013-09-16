@@ -7,4 +7,6 @@ class Artwork < ActiveRecord::Base
   validates_presence_of :available
 
   belongs_to :member
+  has_many :purchases, inverse_of: :artwork
+  has_many :artwork_collections, inverse_of: :artwork
 end
